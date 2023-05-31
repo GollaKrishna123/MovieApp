@@ -22,11 +22,6 @@ const App = () => {
     setMovies(data.Search);
   };
 
-  const searchByEnterHandler = (e)=>{
-    if(e.key==="Enter")
-    searchMovies(search);
-  }
-
   return (
     <div className="app">
       <h1>MovieLand</h1>
@@ -36,7 +31,6 @@ const App = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for movies"
-          onKeyDown={searchByEnterHandler}
         />
         <img
           src={SearchIcon}
